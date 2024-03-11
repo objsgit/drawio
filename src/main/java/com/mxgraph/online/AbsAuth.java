@@ -7,30 +7,29 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.math.BigInteger;
 import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.cache.Cache;
-import javax.cache.CacheException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletResponse;
+
 @SuppressWarnings("serial")
-abstract public class AbsAuth extends HttpServlet implements AbsComm
+public abstract class AbsAuth extends HttpServlet implements AbsComm
 {
 	private static final Logger log = Logger.getLogger(AbsAuth.class.getName());
 	private static final boolean DEBUG = false;

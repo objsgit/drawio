@@ -170,7 +170,6 @@ public class Utils
 	 * Copies the input stream to the output stream using the default buffer size
 	 * @param in the input stream
 	 * @param out the output stream
-	 * @param sizeLimit the maximum number of bytes to copy
 	 * @throws IOException
 	 */
 	public static int copyRestricted(InputStream in, OutputStream out) throws IOException

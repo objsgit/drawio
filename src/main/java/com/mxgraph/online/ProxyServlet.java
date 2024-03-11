@@ -17,12 +17,11 @@ import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import com.google.apphosting.api.DeadlineExceededException;
 import com.mxgraph.online.Utils.UnsupportedContentException;
 import com.mxgraph.online.Utils.SizeLimitExceededException;
 
@@ -176,10 +175,6 @@ public class ProxyServlet extends HttpServlet
 						+ ((urlParam != null) ? urlParam : "[null]")
 						+ ", referer=" + ((ref != null) ? ref : "[null]")
 						+ ", user agent=" + ((ua != null) ? ua : "[null]"));
-			}
-			catch (DeadlineExceededException e)
-			{
-				response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 			}
 			catch (UnknownHostException | FileNotFoundException e)
 			{

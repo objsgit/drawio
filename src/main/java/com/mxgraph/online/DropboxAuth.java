@@ -3,8 +3,6 @@
  */
 package com.mxgraph.online;
 
-import java.io.IOException;
-
 @SuppressWarnings("serial")
 abstract public class DropboxAuth extends AbsAuth
 {

@@ -35,14 +35,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.commons.text.StringEscapeUtils;
-
-import com.google.appengine.api.utils.SystemProperty;
 
 import com.mxgraph.online.Utils.SizeLimitExceededException;
 
@@ -89,7 +87,7 @@ public class EmbedServlet2 extends HttpServlet
 		if (lastModified == null)
 		{
 			// Uses deployment date as lastModified header
-			String applicationVersion = SystemProperty.applicationVersion.get();
+			String applicationVersion = "1.0.0";
 			Date uploadDate = new Date(Long
 					.parseLong(applicationVersion
 							.substring(applicationVersion.lastIndexOf(".") + 1))
